@@ -8,8 +8,13 @@ using IBM.Data.DB2.Core;
 using System.Data;
 using System.Configuration;
 using Basic;
+using SQLUI;
 using Oracle.ManagedDataAccess.Client;
+using System.Text;
+using HIS_DB_Lib;
+using System.Text.Json.Serialization;
 using ServiceReference;
+using MySql.Data.MySqlClient;
 namespace DB2VM
 {
     [Route("dbvm/[controller]")]
@@ -24,11 +29,17 @@ namespace DB2VM
         {
 
             ServiceReference.ADCMedicineCabinetWCFServiceClient client = new ADCMedicineCabinetWCFServiceClient();
+            string json0 = await client.MEDCABINET_DataAsync(barcode);
+            string json1 = await client.AutoStorage_DataAsync(barcode);
+            string json2 =await client.QueryRtxmda_DataAsync(barcode);
+            string json3 = await client.QueryRtxmda_Bags_ContentAsync(barcode);
 
-            //string json = await client.MEDCABINET_DataAsync(barcode);
-            string json = await client.AutoStorage_DataAsync(barcode);
-            //string json =await client.QueryRtxmda_DataAsync(barcode);
-            //string json = await client.QueryRtxmda_Bags_ContentAsync(barcode);
+
+            string json = "";
+            json += $"[MEDCABINET_DataAsync]:{json0}\n";
+            json += $"[AutoStorage_DataAsync]:{json1}\n";
+            json += $"[QueryRtxmda_DataAsync]:{json2}\n";
+            json += $"[QueryRtxmda_Bags_ContentAsync]:{json3}\n";
             return json;
 
 

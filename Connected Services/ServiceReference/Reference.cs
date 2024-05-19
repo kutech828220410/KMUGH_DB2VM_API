@@ -225,6 +225,479 @@ namespace ServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="VW_LOG_BATCH_BAG_WCFDto", Namespace="http://schemas.datacontract.org/2004/07/KMUH.ADCMedicineCabinet.ApplicationLayer." +
+        "DTO")]
+    public partial class VW_LOG_BATCH_BAG_WCFDto : object
+    {
+        
+        private string ADC_FLAGField;
+        
+        private string ATTField;
+        
+        private string BARCODEField;
+        
+        private string BIRTH_DATEField;
+        
+        private string CHINESE_NAMEField;
+        
+        private string DCNM_CHART_NOField;
+        
+        private string DRG_NAMEField;
+        
+        private string DRG_NOMENCLATUREField;
+        
+        private string DRG_SPECField;
+        
+        private string DRG_UNITField;
+        
+        private string EMP_NAME_UDField;
+        
+        private string ENGLISH_DESCField;
+        
+        private string FEECODEField;
+        
+        private string FREQCODEField;
+        
+        private string INNER_WARNINGField;
+        
+        private string ISFRZField;
+        
+        private string LASAField;
+        
+        private string LOG_DATEField;
+        
+        private System.Nullable<int> LOG_SEQField;
+        
+        private string LOG_TIMEField;
+        
+        private string OPT_NAMEField;
+        
+        private string OPT_NURSE_STATIONField;
+        
+        private string OPT_WARDField;
+        
+        private string ORDERUNITField;
+        
+        private string PARAMETER2Field;
+        
+        private string PRNJOBIDField;
+        
+        private System.Nullable<decimal> QTYField;
+        
+        private string SURFACE_MARKField;
+        
+        private string SURFACE_SHAPEField;
+        
+        private string UTY_EMP_CODEField;
+        
+        private System.Nullable<int> WOK_CHARGE_QTYField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ADC_FLAG
+        {
+            get
+            {
+                return this.ADC_FLAGField;
+            }
+            set
+            {
+                this.ADC_FLAGField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ATT
+        {
+            get
+            {
+                return this.ATTField;
+            }
+            set
+            {
+                this.ATTField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BARCODE
+        {
+            get
+            {
+                return this.BARCODEField;
+            }
+            set
+            {
+                this.BARCODEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string BIRTH_DATE
+        {
+            get
+            {
+                return this.BIRTH_DATEField;
+            }
+            set
+            {
+                this.BIRTH_DATEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CHINESE_NAME
+        {
+            get
+            {
+                return this.CHINESE_NAMEField;
+            }
+            set
+            {
+                this.CHINESE_NAMEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DCNM_CHART_NO
+        {
+            get
+            {
+                return this.DCNM_CHART_NOField;
+            }
+            set
+            {
+                this.DCNM_CHART_NOField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DRG_NAME
+        {
+            get
+            {
+                return this.DRG_NAMEField;
+            }
+            set
+            {
+                this.DRG_NAMEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DRG_NOMENCLATURE
+        {
+            get
+            {
+                return this.DRG_NOMENCLATUREField;
+            }
+            set
+            {
+                this.DRG_NOMENCLATUREField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DRG_SPEC
+        {
+            get
+            {
+                return this.DRG_SPECField;
+            }
+            set
+            {
+                this.DRG_SPECField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DRG_UNIT
+        {
+            get
+            {
+                return this.DRG_UNITField;
+            }
+            set
+            {
+                this.DRG_UNITField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EMP_NAME_UD
+        {
+            get
+            {
+                return this.EMP_NAME_UDField;
+            }
+            set
+            {
+                this.EMP_NAME_UDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ENGLISH_DESC
+        {
+            get
+            {
+                return this.ENGLISH_DESCField;
+            }
+            set
+            {
+                this.ENGLISH_DESCField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FEECODE
+        {
+            get
+            {
+                return this.FEECODEField;
+            }
+            set
+            {
+                this.FEECODEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FREQCODE
+        {
+            get
+            {
+                return this.FREQCODEField;
+            }
+            set
+            {
+                this.FREQCODEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string INNER_WARNING
+        {
+            get
+            {
+                return this.INNER_WARNINGField;
+            }
+            set
+            {
+                this.INNER_WARNINGField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ISFRZ
+        {
+            get
+            {
+                return this.ISFRZField;
+            }
+            set
+            {
+                this.ISFRZField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LASA
+        {
+            get
+            {
+                return this.LASAField;
+            }
+            set
+            {
+                this.LASAField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LOG_DATE
+        {
+            get
+            {
+                return this.LOG_DATEField;
+            }
+            set
+            {
+                this.LOG_DATEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> LOG_SEQ
+        {
+            get
+            {
+                return this.LOG_SEQField;
+            }
+            set
+            {
+                this.LOG_SEQField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string LOG_TIME
+        {
+            get
+            {
+                return this.LOG_TIMEField;
+            }
+            set
+            {
+                this.LOG_TIMEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OPT_NAME
+        {
+            get
+            {
+                return this.OPT_NAMEField;
+            }
+            set
+            {
+                this.OPT_NAMEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OPT_NURSE_STATION
+        {
+            get
+            {
+                return this.OPT_NURSE_STATIONField;
+            }
+            set
+            {
+                this.OPT_NURSE_STATIONField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OPT_WARD
+        {
+            get
+            {
+                return this.OPT_WARDField;
+            }
+            set
+            {
+                this.OPT_WARDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ORDERUNIT
+        {
+            get
+            {
+                return this.ORDERUNITField;
+            }
+            set
+            {
+                this.ORDERUNITField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PARAMETER2
+        {
+            get
+            {
+                return this.PARAMETER2Field;
+            }
+            set
+            {
+                this.PARAMETER2Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PRNJOBID
+        {
+            get
+            {
+                return this.PRNJOBIDField;
+            }
+            set
+            {
+                this.PRNJOBIDField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> QTY
+        {
+            get
+            {
+                return this.QTYField;
+            }
+            set
+            {
+                this.QTYField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SURFACE_MARK
+        {
+            get
+            {
+                return this.SURFACE_MARKField;
+            }
+            set
+            {
+                this.SURFACE_MARKField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SURFACE_SHAPE
+        {
+            get
+            {
+                return this.SURFACE_SHAPEField;
+            }
+            set
+            {
+                this.SURFACE_SHAPEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UTY_EMP_CODE
+        {
+            get
+            {
+                return this.UTY_EMP_CODEField;
+            }
+            set
+            {
+                this.UTY_EMP_CODEField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> WOK_CHARGE_QTY
+        {
+            get
+            {
+                return this.WOK_CHARGE_QTYField;
+            }
+            set
+            {
+                this.WOK_CHARGE_QTYField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.Runtime.Serialization.DataContractAttribute(Name="KmughRtxMdaDto", Namespace="http://schemas.datacontract.org/2004/07/KMUH.ADCMedicineCabinet.ApplicationLayer." +
         "DTO")]
     public partial class KmughRtxMdaDto : ServiceReference.BaseDTOEntity
@@ -540,6 +1013,12 @@ namespace ServiceReference
             "orFault", Name="ApplicationServiceError", Namespace="http://schemas.datacontract.org/2004/07/KMUH.ADCMedicineCabinet.Services.ErrorHan" +
             "dlers")]
         System.Threading.Tasks.Task<ServiceReference.DrugInfoDto[]> GetDrugInfoAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IADCMedicineCabinetWCFService/GetBATCH_BAG_By_BARCODE", ReplyAction="http://tempuri.org/IADCMedicineCabinetWCFService/GetBATCH_BAG_By_BARCODEResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ServiceReference.ApplicationServiceError), Action="http://tempuri.org/IADCMedicineCabinetWCFService/GetBATCH_BAG_By_BARCODEApplicati" +
+            "onServiceErrorFault", Name="ApplicationServiceError", Namespace="http://schemas.datacontract.org/2004/07/KMUH.ADCMedicineCabinet.Services.ErrorHan" +
+            "dlers")]
+        System.Threading.Tasks.Task<ServiceReference.VW_LOG_BATCH_BAG_WCFDto[]> GetBATCH_BAG_By_BARCODEAsync(string BARCODE);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IADCMedicineCabinetWCFService/GetRTXMNO_Info_KMUGH", ReplyAction="http://tempuri.org/IADCMedicineCabinetWCFService/GetRTXMNO_Info_KMUGHResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(ServiceReference.ApplicationServiceError), Action="http://tempuri.org/IADCMedicineCabinetWCFService/GetRTXMNO_Info_KMUGHApplicationS" +
@@ -867,6 +1346,24 @@ namespace ServiceReference
             "nServiceErrorFault", Name="ApplicationServiceError", Namespace="http://schemas.datacontract.org/2004/07/KMUH.ADCMedicineCabinet.Services.ErrorHan" +
             "dlers")]
         System.Threading.Tasks.Task<string> QueryRtxmda_Data_KMUGHAsync(string inBarCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IADCMedicineCabinetWCFService/QryBATCH_BAG_By_BARCODE", ReplyAction="http://tempuri.org/IADCMedicineCabinetWCFService/QryBATCH_BAG_By_BARCODEResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ServiceReference.ApplicationServiceError), Action="http://tempuri.org/IADCMedicineCabinetWCFService/QryBATCH_BAG_By_BARCODEApplicati" +
+            "onServiceErrorFault", Name="ApplicationServiceError", Namespace="http://schemas.datacontract.org/2004/07/KMUH.ADCMedicineCabinet.Services.ErrorHan" +
+            "dlers")]
+        System.Threading.Tasks.Task<string> QryBATCH_BAG_By_BARCODEAsync(string inBarCode);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IADCMedicineCabinetWCFService/DrugInfoTcm", ReplyAction="http://tempuri.org/IADCMedicineCabinetWCFService/DrugInfoTcmResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ServiceReference.ApplicationServiceError), Action="http://tempuri.org/IADCMedicineCabinetWCFService/DrugInfoTcmApplicationServiceErr" +
+            "orFault", Name="ApplicationServiceError", Namespace="http://schemas.datacontract.org/2004/07/KMUH.ADCMedicineCabinet.Services.ErrorHan" +
+            "dlers")]
+        System.Threading.Tasks.Task<string> DrugInfoTcmAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IADCMedicineCabinetWCFService/QueryDrugInfoTcm", ReplyAction="http://tempuri.org/IADCMedicineCabinetWCFService/QueryDrugInfoTcmResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(ServiceReference.ApplicationServiceError), Action="http://tempuri.org/IADCMedicineCabinetWCFService/QueryDrugInfoTcmApplicationServi" +
+            "ceErrorFault", Name="ApplicationServiceError", Namespace="http://schemas.datacontract.org/2004/07/KMUH.ADCMedicineCabinet.Services.ErrorHan" +
+            "dlers")]
+        System.Threading.Tasks.Task<string> QueryDrugInfoTcmAsync(ServiceReference.DrougCodeParam[] Param);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
@@ -922,6 +1419,11 @@ namespace ServiceReference
         public System.Threading.Tasks.Task<ServiceReference.DrugInfoDto[]> GetDrugInfoAsync()
         {
             return base.Channel.GetDrugInfoAsync();
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference.VW_LOG_BATCH_BAG_WCFDto[]> GetBATCH_BAG_By_BARCODEAsync(string BARCODE)
+        {
+            return base.Channel.GetBATCH_BAG_By_BARCODEAsync(BARCODE);
         }
         
         public System.Threading.Tasks.Task<ServiceReference.KmughRtxMdaDto[]> GetRTXMNO_Info_KMUGHAsync(string BarCode)
@@ -1187,6 +1689,21 @@ namespace ServiceReference
         public System.Threading.Tasks.Task<string> QueryRtxmda_Data_KMUGHAsync(string inBarCode)
         {
             return base.Channel.QueryRtxmda_Data_KMUGHAsync(inBarCode);
+        }
+        
+        public System.Threading.Tasks.Task<string> QryBATCH_BAG_By_BARCODEAsync(string inBarCode)
+        {
+            return base.Channel.QryBATCH_BAG_By_BARCODEAsync(inBarCode);
+        }
+        
+        public System.Threading.Tasks.Task<string> DrugInfoTcmAsync()
+        {
+            return base.Channel.DrugInfoTcmAsync();
+        }
+        
+        public System.Threading.Tasks.Task<string> QueryDrugInfoTcmAsync(ServiceReference.DrougCodeParam[] Param)
+        {
+            return base.Channel.QueryDrugInfoTcmAsync(Param);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

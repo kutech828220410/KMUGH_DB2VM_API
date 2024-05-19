@@ -15,46 +15,37 @@ using HIS_DB_Lib;
 using System.Text.Json.Serialization;
 using ServiceReference;
 using MySql.Data.MySqlClient;
-namespace DB2VM.Controller
+namespace DB2VM_API
 {
-
+    public class DrugInfoClass
+    {
+        [JsonPropertyName("DRG_CODE")]
+        public string 藥品代碼 { get; set; }
+        [JsonPropertyName("DRG_NAME")]
+        public string 藥名 { get; set; }
+        [JsonPropertyName("DRG_NOMENCLATURE")]
+        public string 學名 { get; set; }
+        [JsonPropertyName("DRG_SPEC")]
+        public string 規格 { get; set; }
+        [JsonPropertyName("DRG_UNIT")]
+        public string 單位 { get; set; }
+        [JsonPropertyName("DRG_BARCODE_STOCK")]
+        public string 藥局條碼 { get; set; }
+        [JsonPropertyName("DRG_SPEC_QTY")]
+        //(整數七位小數三位)
+        public double 醫囑轉換率 { get; set; }
+        [JsonPropertyName("DRG_SPEC_UNIT")]
+        public string 醫囑轉換單位 { get; set; }
+        [JsonPropertyName("DRG_ATC_CODE")]
+        public string ATC代碼 { get; set; }
+        [JsonPropertyName("CHINESE_DESC")]
+        public string CHINESE_DESC { get; set; }
+    }
 
     [Route("dbvm/[controller]")]
     [ApiController]
-    public class BBCMController : ControllerBase
+    public class BBTCMController
     {
-        public class DrugInfoClass
-        {
-            [JsonPropertyName("DRG_CODE")]
-            public string 藥品代碼 { get; set; }
-            [JsonPropertyName("DRG_NAME")]
-            public string 藥名 { get; set; }
-            [JsonPropertyName("DRG_NOMENCLATURE")]
-            public string 學名 { get; set; }
-            [JsonPropertyName("DRG_SPEC")]
-            public string 規格 { get; set; }
-            [JsonPropertyName("DRG_UNIT")]
-            public string 單位 { get; set; }
-            [JsonPropertyName("DRG_BARCODE_STOCK")]
-            public string 藥局條碼 { get; set; }
-            [JsonPropertyName("DRG_SPEC_QTY")]
-            //(整數七位小數三位)
-            public double 醫囑轉換率 { get; set; }
-            [JsonPropertyName("DRG_SPEC_UNIT")]
-            public string 醫囑轉換單位 { get; set; }
-            [JsonPropertyName("DRG_ATC_CODE")]
-            public string ATC代碼 { get; set; }
-            [JsonPropertyName("CHINESE_DESC")]
-            public string CHINESE_DESC { get; set; }
-        }
-        public class DrugSpecInfoClass
-        {
-            [JsonPropertyName("DRG_CODE")]
-            public string 藥品代碼 { get; set; }
-            [JsonPropertyName("CHINESE_DESC")]
-            public string 管制級別 { get; set; }
-
-        }
         static public string API_Server = "http://127.0.0.1:4433/api/serversetting";
         static private MySqlSslMode SSLMode = MySqlSslMode.None;
         [HttpGet]
@@ -87,8 +78,7 @@ namespace DB2VM.Controller
 
 
             ServiceReference.ADCMedicineCabinetWCFServiceClient client = new ADCMedicineCabinetWCFServiceClient();
-            string json_med = await client.DrugInfoAsync();
-            string json_drugSpecInfo = await client.DrugSpecInfoAsync();
+            string json_med = await client.DrugInfoTcmAsync();
 
             List<DrugInfoClass> DrugInfoClasses = json_med.JsonDeserializet<List<DrugInfoClass>>();
             List<medClass> medClasses = new List<medClass>();
@@ -96,11 +86,12 @@ namespace DB2VM.Controller
             for (int i = 0; i < DrugInfoClasses.Count; i++)
             {
                 medClass medClass = new medClass();
+                string 類別 = "中藥";
                 list_BBCM_buf = list_BBCM.GetRows((int)enum_雲端藥檔.藥品碼, DrugInfoClasses[i].藥品代碼.Trim());
-                string 類別 = "西藥";
                 if (list_BBCM_buf.Count == 0)
                 {
                     medClass.GUID = Guid.NewGuid().ToString();
+            
                     string 管制級別 = "";
                     string 警訊藥品 = "";
 
@@ -110,7 +101,6 @@ namespace DB2VM.Controller
                     if (DrugInfoClasses[i].ATC代碼 != null) medClass.料號 = DrugInfoClasses[i].ATC代碼.Trim();
                     if (DrugInfoClasses[i].單位 != null) medClass.包裝單位 = DrugInfoClasses[i].單位.Trim();
                     medClass.類別 = 類別;
-
                     if (DrugInfoClasses[i].學名 != null)
                     {
                         if (medClass.藥品名稱.Contains("管1")) 管制級別 = "1";
@@ -122,7 +112,7 @@ namespace DB2VM.Controller
                         else 警訊藥品 = false.ToString();
                         medClass.管制級別 = 管制級別;
                         medClass.警訊藥品 = 警訊藥品;
-              
+                  
                     }
 
                     string barcode = "";
@@ -190,7 +180,7 @@ namespace DB2VM.Controller
             }
 
             if (list_BBCM_Add.Count > 0) sQLControl_UDSDBBCM.AddRows(null, list_BBCM_Add);
-      
+
             if (list_BBCM_Replace.Count > 0) sQLControl_UDSDBBCM.UpdateByDefulteExtra(null, list_BBCM_Replace);
 
             returnData.Code = 200;
