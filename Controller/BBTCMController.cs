@@ -79,7 +79,6 @@ namespace DB2VM_API
 
             ServiceReference.ADCMedicineCabinetWCFServiceClient client = new ADCMedicineCabinetWCFServiceClient();
             string json_med = await client.DrugInfoTcmAsync();
-
             List<DrugInfoClass> DrugInfoClasses = json_med.JsonDeserializet<List<DrugInfoClass>>();
             List<medClass> medClasses = new List<medClass>();
 

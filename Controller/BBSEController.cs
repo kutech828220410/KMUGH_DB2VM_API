@@ -19,7 +19,7 @@ namespace DB2VM_API
 {
     [Route("dbvm/[controller]")]
     [ApiController]
-    public class BBSEController: ControllerBase
+    public class BBSEController : ControllerBase
     {
 
         static string MySQL_server = $"{ConfigurationManager.AppSettings["MySQL_server"]}";
@@ -50,12 +50,12 @@ namespace DB2VM_API
             ServiceReference.ADCMedicineCabinetWCFServiceClient client = new ADCMedicineCabinetWCFServiceClient();
             List<EMPCodeParam> eMPCodeParams = new List<EMPCodeParam>();
             EMPCodeParam eMPCodeParam = new EMPCodeParam();
-            if(value.StringIsInt32()) eMPCodeParam.EMP_CODE = value.StringToInt32().ToString();
+            if (value.StringIsInt32()) eMPCodeParam.EMP_CODE = value.StringToInt32().ToString();
             eMPCodeParam.EMP_CODE = value;
             eMPCodeParams.Add(eMPCodeParam);
             string json_Pharmacist = await client.PharmacistAsync(eMPCodeParams.ToArray());
             List<PharmacistClass> pharmacistClasses = json_Pharmacist.JsonDeserializet<List<PharmacistClass>>();
-            if(pharmacistClasses == null)
+            if (pharmacistClasses == null)
             {
                 returnData.Code = -200;
                 returnData.Result = $"取得員工資料失敗! {json_Pharmacist}";
@@ -86,18 +86,18 @@ namespace DB2VM_API
                 ID = returnData.Value;
                 flag_api_call = true;
             }
-         
+
             List<object[]> list_person_list = sQLControl_person_page.GetRowsByDefult(null, (int)enum_人員資料.ID, ID);
-            if(list_person_list.Count == 0 && ID.ToUpper() != "admin".ToUpper())
+            if (list_person_list.Count == 0 && ID.ToUpper() != "admin".ToUpper())
             {
                 string json_Pharmacist = await Get(ID);
                 returnData returnData_Pharmacist = json_Pharmacist.JsonDeserializet<returnData>();
-                if(returnData_Pharmacist.Code == -200)
+                if (returnData_Pharmacist.Code == -200)
                 {
                     return returnData_Pharmacist.JsonSerializationt();
                 }
                 List<PharmacistClass> pharmacistClasses = returnData_Pharmacist.Data.ObjToClass<List<PharmacistClass>>();
-                if(pharmacistClasses == null || pharmacistClasses.Count == 0)
+                if (pharmacistClasses == null || pharmacistClasses.Count == 0)
                 {
                     returnData.Code = -200;
                     returnData.Result = "取得員工資料API異常!";
@@ -153,7 +153,7 @@ namespace DB2VM_API
                 returnData returnData_login = json_login.JsonDeserializet<returnData>();
                 return returnData_login.JsonSerializationt();
             }
-          
+
         }
     }
 }

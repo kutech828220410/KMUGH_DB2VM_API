@@ -13,12 +13,12 @@ using Oracle.ManagedDataAccess.Client;
 using HIS_DB_Lib;
 using ServiceReference;
 using System.Text.Json.Serialization;
-
+using H_Pannel_lib;
 namespace DB2VM
 {
     [Route("dbvm/[controller]")]
     [ApiController]
-    public class BBARController : ControllerBase
+    public class BBTARController : ControllerBase
     {
 
 
@@ -214,12 +214,14 @@ namespace DB2VM
                         orderClasses.Add(orderClass);
                     }
                 }
+
+                List<DeviceBasic> deviceBasics = new List<DeviceBasic>();
                 for (int i = 0; i < order_DBVM_Classes.Count; i++)
                 {
+                    deviceBasics.Clear();
                     OrderClass orderClass = new OrderClass();
                   
                     orderClass.藥品碼 = order_DBVM_Classes[i].藥品代碼.Trim();
-
 
                     medClasses_buf = keyValuePairs.SortDictionaryByCode(orderClass.藥品碼);
                     if (medClasses_buf.Count > 0)
@@ -227,6 +229,11 @@ namespace DB2VM
                         if (medClasses_buf[0].類別 == "中藥")
                         {
                             orderClass.藥品碼 = medClasses_buf[0].藥品碼.Substring(0, 5);
+                            orderClass.藥品碼 = $"{orderClass.藥品碼}*";
+                        }
+                        else
+                        {
+                            continue;
                         }
                     }
 
@@ -393,14 +400,14 @@ namespace DB2VM
                 }
                 dps_api_name = terminal;
 
-                string json_BBAR = await Get(barcode);
-                returnData returnData_BBAR = json_BBAR.JsonDeserializet<returnData>();
-                if(returnData_BBAR.Code != 200)
+                string json_BBTAR = await Get(barcode);
+                returnData returnData_BBTAR = json_BBTAR.JsonDeserializet<returnData>();
+                if(returnData_BBTAR.Code != 200)
                 {
-                    Return_Order_API return_Order_API = new Return_Order_API($"{returnData_BBAR.Result}", false);
+                    Return_Order_API return_Order_API = new Return_Order_API($"{returnData_BBTAR.Result}", false);
                     return return_Order_API.JsonSerializationt();
                 }
-                List<OrderClass> orderClasses = returnData_BBAR.Data.ObjToListClass<OrderClass>();
+                List<OrderClass> orderClasses = returnData_BBTAR.Data.ObjToListClass<OrderClass>();
                 DB2VM_API.BBSEController bBSEController = new DB2VM_API.BBSEController();
                 returnData returnData_BBSE = new returnData();
                 returnData_BBSE.Value = pharmacist;

@@ -1087,3 +1087,13 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\Sunny
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\CSkin.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\SunnyUI.Common.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\DB2VM_API.csproj.AssemblyReference.cache
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\H_Pannel_lib.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\MyOffice.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\zxing.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\NPOI.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\Microsoft.Office.Interop.Excel.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\NPOI.OOXML.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\office.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\NPOI.OpenXml4Net.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Release\net5.0\NPOI.OpenXmlFormats.dll

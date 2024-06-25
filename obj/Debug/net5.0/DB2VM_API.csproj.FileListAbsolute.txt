@@ -1094,7 +1094,6 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Debug\net5.0\DB2VM_A
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Debug\net5.0\DB2VM_API.genruntimeconfig.cache
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\PopupControl.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\SunnyUI.dll
-C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\CSkin.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\SunnyUI.Common.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\H_Pannel_lib.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\MyOffice.dll
@@ -1106,3 +1105,5 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\ICSharp
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\office.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\NPOI.OpenXml4Net.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\Basic.xml
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\CSkin.dll

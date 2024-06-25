@@ -34,12 +34,21 @@ namespace DB2VM
             string json2 =await client.QueryRtxmda_DataAsync(barcode);
             string json3 = await client.QueryRtxmda_Bags_ContentAsync(barcode);
 
-
+            string json_在途藥品 = await client.DrugReceiptDetailAsync();
+            string json_藥局庫房清單 = await client.GetSTKDetpListAsync();
+            string json_請領庫房 = await client.GetReqDetpListAsync();
+            string json_請領類別 = await client.GetReqTypeListAsync();
+            string json_庫存資料 = await client.GetDrugInStockDetailAsync();
             string json = "";
             json += $"[MEDCABINET_DataAsync]:{json0}\n";
             json += $"[AutoStorage_DataAsync]:{json1}\n";
             json += $"[QueryRtxmda_DataAsync]:{json2}\n";
             json += $"[QueryRtxmda_Bags_ContentAsync]:{json3}\n";
+            json += $"[DrugReceiptDetailAsync(在途藥品)]:{json_在途藥品}\n";
+            json += $"[GetSTKDetpListAsync(庫房清單)]:{json_藥局庫房清單}\n";
+            json += $"[GetReqDetpListAsync(請領庫房)]:{json_請領庫房}\n";
+            json += $"[GetReqTypeListAsync(請領類別)]:{json_請領類別}\n";
+            //json += $"[GetDrugInfoAsync(庫存資料)]:{json_庫存資料}\n";
             return json;
 
 
