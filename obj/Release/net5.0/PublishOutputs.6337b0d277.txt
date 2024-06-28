@@ -206,6 +206,7 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTm
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.1\System.Text.Encoding.CodePages.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\Basic.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\CSkin.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\HIS_DB_Lib.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\H_Pannel_lib.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\SQLUI.dll
@@ -213,7 +214,6 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTm
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\System.Management.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\Interop.SpeechLib.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\MyOffice.dll
-C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\CSkin.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\zxing.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\DrawingClass.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\PopupControl.dll
@@ -240,6 +240,7 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTm
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\office.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\NPOI.OpenXml4Net.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\NPOI.OpenXmlFormats.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\Basic.xml
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\HIS_DB_Lib.xml
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\DB2VM_API.Views.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\DB2VM_API.Views.pdb

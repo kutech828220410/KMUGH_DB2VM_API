@@ -80,10 +80,11 @@ namespace DB2VM.Controller
 
             SQLControl sQLControl_UDSDBBCM = new SQLControl(Server, DB, "medicine_page_cloud", UserName, Password, Port, SSLMode);
 
-            List<object[]> list_BBCM = sQLControl_UDSDBBCM.GetAllRows("medicine_page_cloud");
-            List<object[]> list_BBCM_buf = new List<object[]>();
-            List<object[]> list_BBCM_Add = new List<object[]>();
-            List<object[]> list_BBCM_Replace = new List<object[]>();
+            List<medClass> medClasses_cloud = medClass.get_med_cloud("http://127.0.0.1:4433");
+            List<object[]> list_medClasses_cloud = medClasses_cloud.ClassToSQL<medClass ,enum_雲端藥檔>();
+            List<object[]> list_medClasses_cloud_buf = new List<object[]>();
+            List<object[]> list_medClasses_cloud_Add = new List<object[]>();
+            List<object[]> list_medClasses_cloud_Replace = new List<object[]>();
 
 
             ServiceReference.ADCMedicineCabinetWCFServiceClient client = new ADCMedicineCabinetWCFServiceClient();
@@ -96,9 +97,9 @@ namespace DB2VM.Controller
             for (int i = 0; i < DrugInfoClasses.Count; i++)
             {
                 medClass medClass = new medClass();
-                list_BBCM_buf = list_BBCM.GetRows((int)enum_雲端藥檔.藥品碼, DrugInfoClasses[i].藥品代碼.Trim());
+                list_medClasses_cloud_buf = list_medClasses_cloud.GetRows((int)enum_雲端藥檔.藥品碼, DrugInfoClasses[i].藥品代碼.Trim());
                 string 類別 = "西藥";
-                if (list_BBCM_buf.Count == 0)
+                if (list_medClasses_cloud_buf.Count == 0)
                 {
                     medClass.GUID = Guid.NewGuid().ToString();
                     string 管制級別 = "";
@@ -113,10 +114,10 @@ namespace DB2VM.Controller
 
                     if (DrugInfoClasses[i].學名 != null)
                     {
-                        if (medClass.藥品名稱.Contains("管1")) 管制級別 = "1";
-                        else if (medClass.藥品名稱.Contains("管2")) 管制級別 = "2";
-                        else if (medClass.藥品名稱.Contains("管3")) 管制級別 = "3";
-                        else if (medClass.藥品名稱.Contains("管4")) 管制級別 = "4";
+                        if (medClass.藥品名稱.Contains("管1") || medClass.藥品名稱.Contains("管一")) 管制級別 = "1";
+                        else if (medClass.藥品名稱.Contains("管2") || medClass.藥品名稱.Contains("管一")) 管制級別 = "2";
+                        else if (medClass.藥品名稱.Contains("管3") || medClass.藥品名稱.Contains("管一")) 管制級別 = "3";
+                        else if (medClass.藥品名稱.Contains("管4") || medClass.藥品名稱.Contains("管一")) 管制級別 = "4";
                         else 管制級別 = "N";
                         if (medClass.藥品名稱.Contains("●")) 警訊藥品 = true.ToString();
                         else 警訊藥品 = false.ToString();
@@ -129,11 +130,11 @@ namespace DB2VM.Controller
                     if (DrugInfoClasses[i].藥局條碼 != null) barcode = DrugInfoClasses[i].藥局條碼.Trim();
                     medClass.Add_BarCode(barcode);
                     object[] value = medClass.ClassToSQL<medClass, enum_雲端藥檔>();
-                    list_BBCM_Add.Add(value);
+                    list_medClasses_cloud_Add.Add(value);
                 }
                 else
                 {
-                    object[] value = list_BBCM_buf[0];
+                    object[] value = list_medClasses_cloud_buf[0];
                     bool flag_replace = false;
                     bool flag_barcode_replace = true;
                     string 藥品名稱 = value[(int)enum_雲端藥檔.藥品名稱].ObjectToString();
@@ -145,13 +146,10 @@ namespace DB2VM.Controller
 
                     if (藥品名稱 != null)
                     {
-                        if (藥品名稱.Contains("管1"))
-                        {
-                            管制級別 = "1";
-                        }
-                        else if (藥品名稱.Contains("管2")) 管制級別 = "2";
-                        else if (藥品名稱.Contains("管3")) 管制級別 = "3";
-                        else if (藥品名稱.Contains("管4")) 管制級別 = "4";
+                        if (藥品名稱.Contains("管1") || 藥品名稱.Contains("管一")) 管制級別 = "1";
+                        else if (藥品名稱.Contains("管2") || 藥品名稱.Contains("管二")) 管制級別 = "2";
+                        else if (藥品名稱.Contains("管3") || 藥品名稱.Contains("管三")) 管制級別 = "3";
+                        else if (藥品名稱.Contains("管4") || 藥品名稱.Contains("管四")) 管制級別 = "4";
                         else 管制級別 = "N";
                         if (藥品名稱.Contains("●")) 警訊藥品 = true.ToString();
                         else 警訊藥品 = false.ToString();
@@ -183,17 +181,17 @@ namespace DB2VM.Controller
 
 
                         value[(int)enum_雲端藥檔.藥品條碼2] = "";
-                        list_BBCM_Replace.Add(value);
+                        list_medClasses_cloud_Replace.Add(value);
                     }
 
                 }
             }
 
-            if (list_BBCM_Add.Count > 0) sQLControl_UDSDBBCM.AddRows(null, list_BBCM_Add);   
-            if (list_BBCM_Replace.Count > 0) sQLControl_UDSDBBCM.UpdateByDefulteExtra(null, list_BBCM_Replace);
+            if (list_medClasses_cloud_Add.Count > 0) sQLControl_UDSDBBCM.AddRows(null, list_medClasses_cloud_Add);   
+            if (list_medClasses_cloud_Replace.Count > 0) sQLControl_UDSDBBCM.UpdateByDefulteExtra(null, list_medClasses_cloud_Replace);
 
             returnData.Code = 200;
-            returnData.Result = $"取得藥檔完成! 共<{DrugInfoClasses.Count}>筆 ,新增<{list_BBCM_Add.Count}>筆,修改<{list_BBCM_Replace.Count}>筆";
+            returnData.Result = $"取得藥檔完成! 共<{DrugInfoClasses.Count}>筆 ,新增<{list_medClasses_cloud_Add.Count}>筆,修改<{list_medClasses_cloud_Replace.Count}>筆";
             returnData.TimeTaken = myTimerBasic.ToString();
             return returnData.JsonSerializationt(true);
         }

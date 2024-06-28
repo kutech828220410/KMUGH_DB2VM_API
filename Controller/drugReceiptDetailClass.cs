@@ -21,7 +21,7 @@ namespace DB2VM_API
         {
             get
             {
-                return RMS_PURCHASE_NO.ToString("00000000");
+                return RMS_PURCHASE_NO.ToString("000000");
             }
         }
         /// <summary>

@@ -39,6 +39,12 @@ namespace DB2VM
             string json_請領庫房 = await client.GetReqDetpListAsync();
             string json_請領類別 = await client.GetReqTypeListAsync();
             string json_庫存資料 = await client.GetDrugInStockDetailAsync();
+            string 庫別 = "4630";
+            string json_請領資料_E= await client.DrugIssueDetailAsync("E", 庫別);
+            string json_請領資料_B = await client.DrugIssueDetailAsync("B", 庫別);
+            string json_請領資料_C = await client.DrugIssueDetailAsync("E", 庫別);
+            string json_請領資料_F = await client.DrugIssueDetailAsync("F", 庫別);
+            string json_倉儲機 = await client.AutoStorage_Data_ByDateTimesAsync("2024062000000000", "2024062700000000");
             string json = "";
             json += $"[MEDCABINET_DataAsync]:{json0}\n";
             json += $"[AutoStorage_DataAsync]:{json1}\n";
@@ -48,7 +54,7 @@ namespace DB2VM
             json += $"[GetSTKDetpListAsync(庫房清單)]:{json_藥局庫房清單}\n";
             json += $"[GetReqDetpListAsync(請領庫房)]:{json_請領庫房}\n";
             json += $"[GetReqTypeListAsync(請領類別)]:{json_請領類別}\n";
-            //json += $"[GetDrugInfoAsync(庫存資料)]:{json_庫存資料}\n";
+            json += $"[GetDrugInfoAsync(庫存資料)]:{json_庫存資料}\n";
             return json;
 
 
