@@ -99,7 +99,7 @@ namespace DB2VM_API
                     if (DrugInfoClasses[i].學名 != null) medClass.藥品學名 = DrugInfoClasses[i].學名.Trim();
                     if (DrugInfoClasses[i].ATC代碼 != null) medClass.料號 = DrugInfoClasses[i].ATC代碼.Trim();
                     if (DrugInfoClasses[i].單位 != null) medClass.包裝單位 = DrugInfoClasses[i].單位.Trim();
-                    medClass.類別 = 類別;
+                    medClass.中西藥 = 類別;
                     if (DrugInfoClasses[i].學名 != null)
                     {
                         if (medClass.藥品名稱.Contains("管1")) 管制級別 = "1";

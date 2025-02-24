@@ -234,7 +234,12 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTm
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\SunnyUI.Common.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\TCP.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\CallBackUI.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\AxOvkBase.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\AxAltairUDrvAsm4.5.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\AxOvkBaseAsm4.5.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\AxOvkMsr.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\MeasureSystemFunction.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\AxAltairUDrv.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\MVSDK.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\ICSharpCode.SharpZipLib.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\office.dll
@@ -242,6 +247,7 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTm
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\NPOI.OpenXmlFormats.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\Basic.xml
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\HIS_DB_Lib.xml
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\SQLUI.xml
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\DB2VM_API.Views.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\DB2VM_API.Views.pdb
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\obj\Release\net5.0\PubTmp\Out\DB2VM_API.deps.json

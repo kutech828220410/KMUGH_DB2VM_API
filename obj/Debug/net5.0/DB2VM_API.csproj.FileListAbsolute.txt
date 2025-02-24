@@ -1107,3 +1107,9 @@ C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\NPOI.Op
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\NPOI.OpenXmlFormats.dll
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\Basic.xml
 C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\CSkin.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\SQLUI.xml
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\AxOvkBase.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\AxAltairUDrvAsm4.5.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\AxOvkBaseAsm4.5.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\AxOvkMsr.dll
+C:\Users\Administrator\Downloads\KMUGH_DB2VM_API-master\bin\Debug\net5.0\AxAltairUDrv.dll

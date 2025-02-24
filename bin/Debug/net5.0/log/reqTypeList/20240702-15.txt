@@ -1,0 +1,66 @@
+---------------------------------------------------------------------------
+20240702-15:05:05 - {
+  "Data": {},
+  "Code": 0,
+  "Method": "add",
+  "Result": "",
+  "Value": "",
+  "ValueAry": [],
+  "TimeTaken": "",
+  "Token": "",
+  "Server": "",
+  "DbName": "",
+  "TableName": "",
+  "Port": 0,
+  "UserName": "",
+  "Password": "",
+  "ServerType": "",
+  "ServerName": "",
+  "ServerContent": "",
+  "RequestUrl": ""
+}
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+20240702-15:05:14 - {
+  "Data": {},
+  "Code": 0,
+  "Method": "add",
+  "Result": "",
+  "Value": "",
+  "ValueAry": [],
+  "TimeTaken": "",
+  "Token": "",
+  "Server": "",
+  "DbName": "",
+  "TableName": "",
+  "Port": 0,
+  "UserName": "",
+  "Password": "",
+  "ServerType": "",
+  "ServerName": "",
+  "ServerContent": "",
+  "RequestUrl": ""
+}
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+20240702-15:05:15 - {
+  "Data": {},
+  "Code": 0,
+  "Method": "add",
+  "Result": "",
+  "Value": "",
+  "ValueAry": [],
+  "TimeTaken": "",
+  "Token": "",
+  "Server": "",
+  "DbName": "",
+  "TableName": "",
+  "Port": 0,
+  "UserName": "",
+  "Password": "",
+  "ServerType": "",
+  "ServerName": "",
+  "ServerContent": "",
+  "RequestUrl": ""
+}
+---------------------------------------------------------------------------

@@ -164,19 +164,19 @@ namespace DB2VM
                     returnData.Result = "barcode 空白";
                     return returnData.JsonSerializationt(true);
                 }
-                if(!((BarCode.Length == 14 || BarCode.Length == 15) || BarCode.Length == 19 || BarCode.Length == 12))
+                if(!((BarCode.Length == 14 || BarCode.Length == 15) || BarCode.Length == 19 || BarCode.Length == 12 || BarCode.Length == 20))
                 {
                     returnData.Code = -200;
                     returnData.Result = $"barcode 長度異常! [{BarCode}]";
                     return returnData.JsonSerializationt(true);
                 }
                 ServiceReference.ADCMedicineCabinetWCFServiceClient client = new ADCMedicineCabinetWCFServiceClient();
-                if(BarCode.Length == 14 || BarCode.Length == 15)
+                if(BarCode.Length == 14 || BarCode.Length == 15 )
                 {
                     json_order = await client.QueryRtxmda_DataAsync(BarCode);
                     order_DBVM_Classes = json_order.JsonDeserializet<List<Order_DBVM_Class>>();
                 }
-                if (BarCode.Length == 19)
+                if (BarCode.Length == 19 || BarCode.Length == 20)
                 {
                     json_order = await client.QueryRtxmda_Bags_ContentAsync(BarCode);
                     order_DBVM_Classes = json_order.JsonDeserializet<List<Order_DBVM_Class>>();
@@ -316,6 +316,15 @@ namespace DB2VM
                             value[(int)enum_醫囑資料.狀態] = "未過帳";
 
                             list_value_replace.Add(value);
+                        }
+                        else
+                        {
+                            orderClasses[i].展藥時間 = list_value_buf[0][(int)enum_醫囑資料.展藥時間].ObjectToString();
+                            orderClasses[i].產出時間 = list_value_buf[0][(int)enum_醫囑資料.產出時間].ObjectToString();
+                            orderClasses[i].結方日期 = list_value_buf[0][(int)enum_醫囑資料.結方日期].ObjectToString();
+                            orderClasses[i].過帳時間 = list_value_buf[0][(int)enum_醫囑資料.過帳時間].ObjectToString();
+                            orderClasses[i].狀態 = list_value_buf[0][(int)enum_醫囑資料.狀態].ObjectToString();
+
                         }
 
 
