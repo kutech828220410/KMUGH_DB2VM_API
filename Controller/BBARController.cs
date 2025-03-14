@@ -13,6 +13,8 @@ using Oracle.ManagedDataAccess.Client;
 using HIS_DB_Lib;
 using ServiceReference;
 using System.Text.Json.Serialization;
+using System.Web;
+using System.Text.RegularExpressions;
 
 namespace DB2VM
 {
@@ -164,7 +166,19 @@ namespace DB2VM
                     returnData.Result = "barcode 空白";
                     return returnData.JsonSerializationt(true);
                 }
-                if(!((BarCode.Length == 14 || BarCode.Length == 15) || BarCode.Length == 19 || BarCode.Length == 12 || BarCode.Length == 20))
+
+                //BarCode = BarCode.TrimStart('?');
+                //BarCode = BarCode.Trim('\uFEFF');
+
+                if (BarCode.Length < 19)
+                {
+                    BarCode = HttpUtility.UrlDecode(BarCode);
+                    BarCode = Regex.Replace(BarCode, @"^[^\dP]+", "");
+                }
+
+                //BarCode = CleanString(BarCode);
+
+                if (!((BarCode.Length == 14 || BarCode.Length == 15) || BarCode.Length == 19 || BarCode.Length == 12 || BarCode.Length == 20))
                 {
                     returnData.Code = -200;
                     returnData.Result = $"barcode 長度異常! [{BarCode}]";
@@ -450,6 +464,19 @@ namespace DB2VM
                 Return_Order_API return_Order_API = new Return_Order_API($"例外,錯誤訊息:{e.Message}", false);
                 return return_Order_API.JsonSerializationt();
             }
+        }
+        private string CleanString(string input)
+        {
+            // 先解碼 URL 編碼字元
+            string decoded = HttpUtility.UrlDecode(input);
+
+            // 移除 UTF-8 BOM 或其他不可見字符
+            decoded = decoded.Trim('\uFEFF', '\u200B', '\u2060');
+
+            // 移除 ?? 或其他非必要前綴
+            decoded = Regex.Replace(decoded, @"^\?\?+", "");
+
+            return decoded;
         }
     }
 }
